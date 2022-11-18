@@ -1,0 +1,16 @@
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    background-color: rgb(230, 230, 230);
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+td {
+    background-color: white;
+}

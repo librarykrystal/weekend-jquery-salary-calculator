@@ -6,12 +6,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="jquery.js"></script>        
         <script type="text/javascript" src="script.js"></script>
-        <!-- <link rel="stylesheet" href="style.css"> -->
-        <title>Week ?</title>
+        <link rel="stylesheet" href="style.css">
+        <title>Salary Calculator</title>
     </head>
     <body>
         <header>
-            <h1>Notes</h1p>
+            <h1>Salary Calculator</h1p>
         </header>
+        <div class="inputFields">
+            <input placeholder="FIRST" id="firstInput"/>
+            <input placeholder="LAST" id="lastInput"/>
+            <input placeholder="ID NUMBER" id="idNumInput"/>
+            <input placeholder="JOB TITLE" id="jobTitleInput"/>
+            <input placeholder="SALARY" id="salaryInput"/>
+        </div>
+        <button id="addEmployee" class="button">ADD EMPLOYEE</button>
+        <br>
+        <br>
+
+        <table>
+            <thead>
+              <tr>
+                <th>FIRST</th>
+                <th>LAST</th>
+                <th>ID</th>
+                <th>JOB TITLE</th>
+                <th>ANNUAL SALARY</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>David</td>
+                <td>Bowie</td>
+                <td>19470108</td>
+                <td>Starman</td>
+                <td>$10,000,000</td>
+              </tr>
+              <tr>
+                <td>...</td>
+                <td>...</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>tfoot</td>
+              </tr>
+            </tfoot>
+          </table>
+          
     </body>
 </html>
