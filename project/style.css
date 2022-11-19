@@ -14,3 +14,8 @@ th {
 td {
     background-color: white;
 }
+
+.addEmployee {
+    border: 1px solid black;
+    padding: 10px;
+}
