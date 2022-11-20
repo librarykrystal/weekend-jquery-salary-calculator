@@ -25,6 +25,8 @@ function addEmployee(){
     console.log('Employees:', employeesList);
     console.log('Salaries:', salaries);
     addToTable();
+    annualTotaller();
+    monthlyTotaller();
     $('#firstInput').val('');
     $('#lastInput').val('');
     $('#idNumInput').val('');
@@ -32,8 +34,38 @@ function addEmployee(){
     $('#salaryInput').val('');
 }
 
+
 function addToTable(){
     // console.log('f addToTable TEST');
     $('#tableBody').append(`<tr>` + `<td>` + employeeInput.first + `</td>` + `<td>` + employeeInput.last + `</td>` + `<td>` + employeeInput.idNum + `</td>` + `<td>` + employeeInput.jobTitle + `</td>` + `<td>` + employeeInput.salary + `</td>` + `</tr>`);
 }
 
+function annualTotaller(){
+    let annualSum = 0;
+    // console.log('f annualSum TEST');
+    $('#annualSum').empty();
+    //for(let i=0; i<salaries.length; i++){
+    //    annualSum+=parseInt(salaries[i]);
+    //}
+    // Not number. Try again.
+    for(let emp of employeesList){
+        annualSum += Number(emp.salary);
+    }
+    console.log('Annual sum:', annualSum);
+    $('#annualSum').append(annualSum);
+}
+
+function monthlyTotaller(){
+    let monthlySum = 0;
+    // console.log('f annualSum TEST');
+    $('#monthlySum').empty();
+    for(let emp of employeesList){
+        monthlySum += Number(emp.salary);
+    }
+    monthlySum /= 12;
+    if(monthlySum > 20){
+        console.log('OH NO!');
+    }
+    console.log('Monthly sum:', monthlySum);
+    $('#monthlySum').append(monthlySum);
+}
