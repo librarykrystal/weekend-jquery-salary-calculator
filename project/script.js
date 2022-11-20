@@ -4,7 +4,8 @@ $(document).ready(onReady);
 
 function onReady(){
     console.log('f onReady TEST');
-    $('#submitBtn').on('click', addEmployee)
+    $('#submitBtn').on('click', addEmployee);
+    // needs descendent selector?
 }
 
 let employeesList = [];
@@ -20,7 +21,7 @@ function addEmployee(){
     }
     employeesList.push(employeeInput);
     console.log(employeesList);
-    // call next (render to DOM) function here
+    addToTable();
     $('#firstInput').val('');
     $('#lastInput').val('');
     $('#idNumInput').val('');
@@ -28,11 +29,17 @@ function addEmployee(){
     $('#salaryInput').val('');
 }
 
-function monthlyCostCalc (){
-    // Grab salary key from each object in main array
-    // add salaries to their own array?
+function addToTable(){
+    console.log('f addToTable TEST');
+    for(let employee of employeesList){
+    $('#tableBody').append(`<tr>` + `<td>` + employee.first + `</td>` + `<td>` + employee.last + `</td>` + `<td>` + employee.idNum + `</td>` + `<td>` + employee.jobTitle + `</td>` + `<td>` + employee.salary + `</td>` + `</tr>`);
+    }
 }
 
 
-// going to need to... append to a table instead of a ul?
-// so use backticks and write out <td> instead of <li>?
+
+// function monthlyCostCalc (){
+//     // Grab salary key from each object in main array
+//     // add salaries to their own array, then loop through?
+//     // Or loop through main array only grabbing salary values?
+// }
