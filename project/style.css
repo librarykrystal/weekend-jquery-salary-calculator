@@ -4,6 +4,7 @@ table, th, td {
 
 table {
     background-color: rgb(230, 230, 230);
+    empty-cells: hide;
 }
 
 th {
@@ -15,7 +16,13 @@ td {
     background-color: white;
 }
 
-.addEmployee {
+/* .addEmployee {
     border: 1px solid black;
     padding: 10px;
+} */
+
+.totalText {
+    background-color: rgb(230, 230, 230);
+    border: none;
+    text-align: right;
 }
