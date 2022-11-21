@@ -69,6 +69,7 @@ function monthlyTotaller(){
     if(monthlySum > 20000){
         //console.log('Monthly limit TEST');
         //TO DO: if >20000, change background to red
+        $('#monthlySum').css('background-color', 'red');
 
     }
     console.log('Monthly sum:', monthlySum);
