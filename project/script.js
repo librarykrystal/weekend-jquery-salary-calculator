@@ -38,8 +38,6 @@ function addEmployee(){
 
 function addToTable(){
     // console.log('f addToTable TEST');
-    // $('#tableBody').append(`<tr>` + `<td>` + employeeInput.first + `</td>` + `<td>` + employeeInput.last + `</td>` + `<td>` + employeeInput.idNum + `</td>` + `<td>` + employeeInput.jobTitle + `</td>` + `<td>` + employeeInput.salary + `</td>` + `</tr>`);
-
     $('#tableBody').append(`<tr>` + `<td>` + employeeInput.first + `</td>` + `<td>` + employeeInput.last + `</td>` + `<td>` + employeeInput.idNum + `</td>` + `<td>` + employeeInput.jobTitle + `</td>` + `<td>` + employeeInput.salary + `</td>` + `<td>` + `<button id="removeBtn">REMOVE</button>` + `</td>` + `</tr>`);
 }
 
@@ -47,10 +45,6 @@ function annualTotaller(){
     let annualSum = 0;
     // console.log('f annualSum TEST');
     $('#annualSum').empty();
-    //for(let i=0; i<salaries.length; i++){
-    //    annualSum+=parseInt(salaries[i]);
-    //}
-    // Not number. Try again.
     for(let emp of employeesList){
         annualSum += Number(emp.salary);
     }
@@ -68,14 +62,12 @@ function monthlyTotaller(){
     monthlySum /= 12;
     if(monthlySum > 20000){
         //console.log('Monthly limit TEST');
-        //TO DO: if >20000, change background to red
-        $('#monthlySum').css('background-color', 'red');
+        $('#monthlySum').css('background-color', 'salmon');
 
     }
     console.log('Monthly sum:', monthlySum);
     $('#monthlySum').append(monthlySum);
 }
-
 
 function removeEmployeeRow(){
     // console.log('removeEmployee TEST');
